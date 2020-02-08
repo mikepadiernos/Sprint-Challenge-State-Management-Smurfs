@@ -31,6 +31,11 @@ export default function SmurfForm() {
 				setSmurf(response.data)
 			})
 			.catch(error => console.log(error));
+		setFormData({
+			name: "",
+			age: "",
+			height: ""
+		});
 	};
 
 	console.log("And..", smurf);
