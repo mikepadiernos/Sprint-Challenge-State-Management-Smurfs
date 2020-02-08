@@ -22,17 +22,22 @@ export default function SmurfForm() {
 		});
 	};
 
-	const onSubmit = e => {
+	const handleSubmit = e => {
 		e.preventDefault();
 		axios
 			.post("http://localhost:3333/smurfs", formData)
-			.then(response => setSmurf([...smurf, response.data]))
+			.then(response => {
+				console.log("Post", response);
+				setSmurf(response.data)
+			})
 			.catch(error => console.log(error));
 	};
 
+	console.log("And..", smurf);
+
 	return (
 		<section className="form form-smurf">
-			<form onSubmit={onSubmit}>
+			<form onSubmit={handleSubmit}>
 				<label htmlFor="name">Name</label><br />
 				<input
 					name="name"

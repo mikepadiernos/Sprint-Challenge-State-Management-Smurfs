@@ -22,7 +22,7 @@ export const SmurfList = () => {
 	}, []);
 
 	return (
-		<section>
+		<section className="list list-smurf">
 			{smurf.map(item => (
 				<Smurf
 					key={item.id}
