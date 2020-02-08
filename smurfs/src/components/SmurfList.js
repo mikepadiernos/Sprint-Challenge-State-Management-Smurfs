@@ -23,6 +23,7 @@ export const SmurfList = () => {
 
 	return (
 		<section className="list list-smurf">
+			<h2>And they are...</h2>
 			{smurf.map(item => (
 				<Smurf
 					key={item.id}
