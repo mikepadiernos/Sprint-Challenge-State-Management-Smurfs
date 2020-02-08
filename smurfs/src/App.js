@@ -9,6 +9,7 @@ import SmurfContext from "./context/SmurfContext";
 
 // IMPORT APP COMPONENTS
 import { SmurfList } from "./components/SmurfList";
+import SmurfForm from "./components/SmurfForm";
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
             <h1>It's the SMURFS!</h1>
           </header>
           <main id="main-content" className="main-content">
+            <SmurfForm />
             <SmurfList />
           </main>
         </div>
